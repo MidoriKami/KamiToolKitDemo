@@ -29,14 +29,8 @@ public static class Counters {
 			Size = new Vector2(treeListCategoryNode.Width / 2.0f, 48.0f),
 			IsVisible = true,
 			
-			// Specify the texture to load
-			TexturePath = "ui/uld/RaceChocoboNum.tex",
-			
-			// The size of the texture to load
-			TextureSize = new Vector2(30.0f, 60.0f),
-			
-			// The coordinates within the texture
-			TextureCoordinates = Vector2.Zero,
+			// Which preloaded font to use
+			Font = CounterFont.ChocoboRace,
 			
 			// Size in pixels for each digit, you can make this smaller to squish the numbers together
 			NumberWidth = 32,
