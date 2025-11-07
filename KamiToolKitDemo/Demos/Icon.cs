@@ -84,17 +84,17 @@ public static class Icons {
 			IsClickable = false,
 			
 			// Event that is called when the button is moused over, this example shows a fancy tooltip for the action in the slot
-			OnRollOver = (node, _) => node.ShowTooltip(AtkTooltipManager.AtkTooltipType.Action, ActionKind.MainCommand),
+			OnRollOver = node => node.ShowTooltip(AtkTooltipManager.AtkTooltipType.Action, ActionKind.MainCommand),
 			
 			// Event that is called once the button is click-dragged
-			OnBegin = (_, _) => { },
+			OnBegin = _ => { },
 			
 			// Event that is called once the button is no longer being click-dragged
-			OnEnd = (_, _) => { },
+			OnEnd = _ => { },
 			
 			// Event that is called when a drag drop element is dropped into our node
 			// If this node's accepted type allows this payload, then OnPayloadAccepted is invoked
-			OnPayloadAccepted = (node, _, payload) => {
+			OnPayloadAccepted = (node, payload) => {
 				
 				// You will need to set this node to the correct data for the payload being received
 				
@@ -108,13 +108,13 @@ public static class Icons {
 			},
 			
 			// Event that is fired when drag is dropped into the world to discard the thing
-			OnDiscard = (node, _) => node.Clear(),
+			OnDiscard = node => node.Clear(),
 			
 			// Event that is fired when the button is clicked on
-			OnClicked = (node, _) => UIModule.Instance()->ExecuteMainCommand((uint)node.Payload.Int2),
+			OnClicked = node => UIModule.Instance()->ExecuteMainCommand((uint)node.Payload.Int2),
 
 			// Event that is fired when the cursor is no longer hovering over the drag drop node
-			OnRollOut = (node, _) => node.HideTooltip(),
+			OnRollOut = node => node.HideTooltip(),
 		};
 
 		flexGrid.AddNode(dragDropNode);
