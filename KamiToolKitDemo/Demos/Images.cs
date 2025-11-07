@@ -82,6 +82,9 @@ public static class Images {
 		var iconImageNode = new IconImageNode {
 			IsVisible = true,
 			Size = new Vector2(64.0f, 64.0f),
+			
+			// Fit the texture to the node
+			FitTexture = true,
 
 			// The icon texture we want to load
 			IconId = 2551,
