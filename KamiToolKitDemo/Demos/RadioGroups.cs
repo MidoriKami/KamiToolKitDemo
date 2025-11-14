@@ -18,7 +18,7 @@ public static class RadioGroups {
 		radioGroupCategory.AddNode(tabList);
 		
 		// A very basic text node with various default properties set
-		var label = new LabelTextNode {
+		var label = new CategoryTextNode {
 			String = "Some String",
 		};
 		
