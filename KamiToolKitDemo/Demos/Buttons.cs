@@ -36,6 +36,9 @@ public static class Buttons {
 		
 		treeListCategoryNode.AddHeader("HoldButton");
 		HoldButton(treeListCategoryNode);
+		
+		treeListCategoryNode.AddHeader("ColorButton");
+		ColorButton(treeListCategoryNode);
 	}
 
 	private static void CircleButton(TreeListCategoryNode treeListCategoryNode) {
@@ -195,6 +198,31 @@ public static class Buttons {
 		textureButton.OnClick += () => textureButton.Reset();
 		
 		flexGrid.AddNode(textureButton);
+		flexGrid.AddNode(textNode);
+		
+		treeListCategoryNode.AddNode(flexGrid);
+	}
+	
+	private static void ColorButton(TreeListCategoryNode treeListCategoryNode) {
+		var flexGrid = GetContainer(treeListCategoryNode);
+		
+		var textNode = GetTextNode();
+		var clickCount = 0;
+		
+		// A color option text button node, shows the current color as a preview
+		var circleButton = new ColorOptionTextButtonNode {
+			Size = new Vector2(150.0f, 24.0f),
+			
+			String = "Some Label",
+
+			// All button nodes have a "OnClick" handler you can subscribe to
+			OnClick = () => {
+				clickCount++;
+				textNode.String = $"Button Has Been Pressed: {clickCount} times";
+			},
+		};
+		
+		flexGrid.AddNode(circleButton);
 		flexGrid.AddNode(textNode);
 		
 		treeListCategoryNode.AddNode(flexGrid);
