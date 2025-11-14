@@ -12,7 +12,6 @@ public static class ProgressBars {
 	private static HorizontalFlexNode GetContainer(TreeListCategoryNode treeListCategoryNode) => new() {
 		Width = treeListCategoryNode.Width / 2.0f,
 		AlignmentFlags = FlexFlags.CenterVertically | FlexFlags.CenterHorizontally | FlexFlags.FitContentHeight,
-		IsVisible = true,
 	};
 	
 	public static void ProgressBarDemo(TreeListCategoryNode treeListCategoryNode) {
@@ -29,7 +28,6 @@ public static class ProgressBars {
 		// Node that looks like a castbar
 		var castBarNode = new CastBarProgressBarNode {
 			Size = new Vector2(300.0f, 32.0f),
-			IsVisible = true,
 			
 			// Value between 0.0f and 1.0f (inclusive)
 			Progress = 0.20f,
@@ -45,7 +43,6 @@ public static class ProgressBars {
 		
 		var progressSlider = new SliderNode {
 			Size = new Vector2(150.0f, 32.0f),
-			IsVisible = true,
 			Range = .. 100,
 			Value = 20,
 			OnValueChanged = newValue => castBarNode.Progress = newValue / 100.0f,
@@ -53,7 +50,6 @@ public static class ProgressBars {
 
 		var randomColorButton = new TextButtonNode {
 			Size = new Vector2(150.0f, 32.0f),
-			IsVisible = true,
 			String = "Randomize Color",
 			OnClick = () => {
 				var rng = new Random();
@@ -75,7 +71,6 @@ public static class ProgressBars {
 		// Node that looks like the active quest list's progress bar
 		var castBarNode = new ProgressBarNode {
 			Size = new Vector2(300.0f, 32.0f),
-			IsVisible = true,
 			
 			// Value between 0.0f and 1.0f (inclusive)
 			Progress = 0.35f,
@@ -87,7 +82,6 @@ public static class ProgressBars {
 		
 		var progressSlider = new SliderNode {
 			Size = new Vector2(150.0f, 32.0f),
-			IsVisible = true,
 			Range = .. 100,
 			Value = 35,
 			OnValueChanged = newValue => castBarNode.Progress = newValue / 100.0f,
@@ -95,7 +89,6 @@ public static class ProgressBars {
 
 		var randomColorButton = new TextButtonNode {
 			Size = new Vector2(150.0f, 32.0f),
-			IsVisible = true,
 			String = "Randomize Color",
 			OnClick = () => {
 				var rng = new Random();

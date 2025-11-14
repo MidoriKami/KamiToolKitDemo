@@ -18,19 +18,16 @@ public static class TabBars {
 		var container = new VerticalListNode {
 			Size = new Vector2(tabBarCategory.Width - 8.0f, 0.0f),
 			Position = new Vector2(4.0f, 0.0f),
-			IsVisible = true,
 			FitContents = true,
 		};
 
 		var tabContainer = new ResNode {
 			Size = new Vector2(tabBarCategory.Width, 28.0f), 
-			IsVisible = true,
 		};
 
 		var textNode1 = new TextNode {
 			TextFlags = TextFlags.AutoAdjustNodeSize, 
 			String = "First Tab Element", 
-			IsVisible = true,
 		};
 		
 		var textNode2 = new TextNode {
@@ -49,7 +46,6 @@ public static class TabBars {
 		// and to set up onclick events when a tab is clicked
 		var tabBar = new TabBarNode {
 			Size = new Vector2(tabBarCategory.Width - 8.0f, 24.0f), 
-			IsVisible = true,
 		};
 
 		tabBar.AddTab("First", () => {

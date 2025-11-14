@@ -9,7 +9,6 @@ public static class KeyboardInput {
 	private static HorizontalFlexNode GetContainer(TreeListCategoryNode treeListCategoryNode) => new() {
 		Width = treeListCategoryNode.Width,
 		AlignmentFlags = FlexFlags.FitHeight | FlexFlags.CenterHorizontally | FlexFlags.FitContentHeight,
-		IsVisible = true,
 	};
 
 	public static void InputDemo(TreeListCategoryNode treeListCategoryNode) {
@@ -37,7 +36,6 @@ public static class KeyboardInput {
 		// Text input nodes are for getting strings from the user
 		var textInputNode = new TextInputNode {
 			Size = new Vector2(200.0f, 28.0f),
-			IsVisible = true,
 
 			// Set maximum string length, can be 0 for no limit
 			MaxCharacters = 20,
@@ -79,7 +77,6 @@ public static class KeyboardInput {
 		// Text input nodes are for getting strings from the user
 		var multilineInput = new TextMultiLineInputNode {
 			Size = new Vector2(200.0f, 28.0f),
-			IsVisible = true,
 
 			// You can show or hide the character limit node
 			ShowLimitText = true,
@@ -125,7 +122,6 @@ public static class KeyboardInput {
 		// Numeric Inputs are for getting numbers from the user
 		var numericInputNode = new NumericInputNode {
 			Size = new Vector2(200.0f, 28.0f),
-			IsVisible = true,
 
 			// Min Value
 			Min = -100,

@@ -9,7 +9,6 @@ public static class Counters {
 	private static HorizontalFlexNode GetContainer(TreeListCategoryNode treeListCategoryNode) => new() {
 		Width = treeListCategoryNode.Width / 2.0f,
 		AlignmentFlags = FlexFlags.CenterVertically | FlexFlags.FitContentHeight | FlexFlags.CenterHorizontally,
-		IsVisible = true,
 	};
 	
 	public static void CountersDemo(TreeListCategoryNode treeListCategoryNode) {
@@ -27,7 +26,6 @@ public static class Counters {
 		// You must set one for the count to be visible
 		var counter = new CounterNode {
 			Size = new Vector2(treeListCategoryNode.Width / 2.0f, 48.0f),
-			IsVisible = true,
 			
 			// Which preloaded font to use
 			Font = CounterFont.ChocoboRace,
@@ -41,7 +39,6 @@ public static class Counters {
 
 		var slider = new SliderNode {
 			Size = new Vector2(200.0f, 32.0f), 
-			IsVisible = true,
 			Range = .. int.MaxValue,
 			OnValueChanged = newValue => counter.Number = newValue,
 		};
@@ -57,7 +54,6 @@ public static class Counters {
 		// Simpler version of counter node with a default font and default params configured for you
 		var counter = new SimpleCounterNode {
 			Size = new Vector2(treeListCategoryNode.Width / 2.0f, 48.0f),
-			IsVisible = true,
 			
 			// The value to display
 			Number = 1234567890,
@@ -65,7 +61,6 @@ public static class Counters {
 
 		var slider = new SliderNode {
 			Size = new Vector2(200.0f, 32.0f), 
-			IsVisible = true,
 			Range = .. int.MaxValue,
 			OnValueChanged = newValue => counter.Number = newValue,
 		};

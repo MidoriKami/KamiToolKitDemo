@@ -10,7 +10,6 @@ public static class Sliders {
 	private static HorizontalFlexNode GetContainer(TreeListCategoryNode treeListCategoryNode) => new() {
 		Width = treeListCategoryNode.Width,
 		AlignmentFlags = FlexFlags.CenterHorizontally | FlexFlags.FitContentHeight,
-		IsVisible = true,
 	};
 	
 	private static TextNode GetTextNode() => new() {
@@ -32,7 +31,6 @@ public static class Sliders {
 		// Sliders let the user choose values between a set range
 		var sliderNode = new SliderNode {
 			Size = new Vector2(300.0f, 32.0f),
-			IsVisible = true,
 
 			// Range of values to allow
 			Range = 5 .. 30,

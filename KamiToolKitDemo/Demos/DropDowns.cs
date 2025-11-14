@@ -12,7 +12,6 @@ public static class DropDowns {
 		Width = treeListCategoryNode.Width,
 		Height = 28.0f,
 		AlignmentFlags = FlexFlags.FitWidth,
-		IsVisible = true,
 	};
 
 	private static TextNode GetTextNode() => new() {
@@ -38,7 +37,6 @@ public static class DropDowns {
 		// Note: the number of buttons generated is dependent on the higher of the dropdown element
 		var textDropDown = new TextDropDownNode {
 			Size = new Vector2(300.0f, 28.0f),
-			IsVisible = true,
 
 			// How many buttons the list will have at most, if there are fewer options, fewer buttons will be shown
 			MaxListOptions = 2,
@@ -78,7 +76,6 @@ public static class DropDowns {
 		// This allows you to let the user choose from a filtered list of data
 		var luminaDropDown = new LuminaDropDownNode<Aetheryte> {
 			Size = new Vector2(300.0f, 28.0f),
-			IsVisible = true,
 			
 			// How many buttons the list will have at most, if there are fewer options, fewer buttons will be shown
 			MaxListOptions = 9,

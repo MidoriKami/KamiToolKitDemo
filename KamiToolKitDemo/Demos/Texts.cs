@@ -15,7 +15,6 @@ public static class Texts {
 		// Node for displaying text
 		var textNode = new TextNode {
 			Size = new Vector2(treeListCategoryNode.Width, 200.0f),
-			IsVisible = true,
 			
 			// Various font types are available, some fonts only have glyphs for numbers
 			FontType = FontType.Jupiter,

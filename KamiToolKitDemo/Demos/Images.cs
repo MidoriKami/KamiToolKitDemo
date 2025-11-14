@@ -12,7 +12,6 @@ public static class Images {
 	private static HorizontalFlexNode GetContainer(TreeListCategoryNode treeListCategoryNode) => new() {
 		Width = treeListCategoryNode.Width,
 		AlignmentFlags = FlexFlags.FitContentHeight | FlexFlags.CenterVertically | FlexFlags.CenterHorizontally,
-		IsVisible = true,
 	};
 	
 	public static void ImageDemo(TreeListCategoryNode imageCategory) {
@@ -41,7 +40,6 @@ public static class Images {
 		// This is a basic node that is easily colorable to act as a background to any element you desire
 		var backgroundImageNode = new BackgroundImageNode {
 			Size = new Vector2(64.0f, 64.0f),
-			IsVisible = true,
 
 			// Here we can set any color we want, this will accept any values between 0.0f and 1.0f
 			Color = KnownColor.OrangeRed.Vector(),
@@ -56,7 +54,6 @@ public static class Images {
 		
 		// This is a basic node that is easily colorable to act as a background to any element you desire
 		var gifImageNode = new GifImageNode {
-			IsVisible = true,
 			
 			// Sets the file path to load the gif from, this must be loaded from filesystem, as the game does not natively support gifs
 			FilePath = Path.Combine(Services.PluginInterface.AssemblyLocation.Directory?.FullName!, @"assets\niko-oneshot.gif"),
@@ -80,7 +77,6 @@ public static class Images {
 
 		// This is a basic image node with a single texture part and helpers to load icon textures
 		var iconImageNode = new IconImageNode {
-			IsVisible = true,
 			Size = new Vector2(64.0f, 64.0f),
 			
 			// Fit the texture to the node
@@ -99,7 +95,6 @@ public static class Images {
 		
 		// Base type of image that does nothing for you automatically, you are required to allocate parts to make this node work
 		var imageNode = new ImageNode {
-			IsVisible = true, 
 			
 			// This size doesn't have to match the part size, they will be stretched to fit
 			Size = new Vector2(64.0f, 64.0f),
@@ -132,7 +127,6 @@ public static class Images {
 
 		var swapPartButton = new TextButtonNode {
 			Size = new Vector2(150.0f, 28.0f),
-			IsVisible = true,
 			String = "Swap Part Id",
 			OnClick = () => {
 				imageNode.PartId = (uint) (imageNode.PartId is 0 ? 1 : 0);
@@ -150,7 +144,6 @@ public static class Images {
 		// ImGuiImageNode allows us to load any custom image into the game as a simple texture
 		var imGuiImageNoe = new ImGuiImageNode {
 			Size = new Vector2(101.95f, 144.7f),
-			IsVisible = true,
 			
 			// Mode 2 will stretch the parts to fit our current size
 			WrapMode = WrapMode.Stretch,
@@ -171,7 +164,6 @@ public static class Images {
 		
 		// A simple image node with a single texture part already allocated, you only need to set texture information
 		var imageNode = new SimpleImageNode {
-			IsVisible = true,
 			Size = new Vector2(486.0f, 260.0f),
 
 			// Disable texture wrapping

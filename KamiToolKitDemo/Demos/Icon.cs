@@ -12,7 +12,6 @@ public static class Icons {
 	private static HorizontalFlexNode GetContainer(TreeListCategoryNode treeListCategoryNode) => new() {
 		Width = treeListCategoryNode.Width,
 		AlignmentFlags = FlexFlags.FitContentHeight | FlexFlags.CenterVertically | FlexFlags.CenterHorizontally,
-		IsVisible = true,
 	};
 
 	public static void IconDemo(TreeListCategoryNode treeListCategoryNode) {
@@ -30,7 +29,6 @@ public static class Icons {
 		// If you only need to show a game icon, see IconImageNode or IconButtonNode
 		var iconNode = new IconNode {
 			Size = new Vector2(44.0f, 44.0f),
-			IsVisible = true,
 			IconId = 2551,
 			IsMacro = false,
 			IsIconDisabled = true,
@@ -40,7 +38,6 @@ public static class Icons {
 		var button = new TextButtonNode {
 			Position = new Vector2(100.0f, 0.0f),
 			Size = new Vector2(150.0f, 28.0f),
-			IsVisible = true,
 			String = "Toggle Icon Enabled",
 			OnClick = () => {
 				iconNode.IsIconDisabled = !iconNode.IsIconDisabled;
@@ -59,7 +56,6 @@ public static class Icons {
 		// DragDropNode's are even more complex nodes for accepting and providing actions and icons
 		var dragDropNode = new DragDropNode {
 			Size = new Vector2(44.0f, 44.0f),
-			IsVisible = true,
 			
 			// IconId to display (this example is the iconId of the MainCommand for Inventory)
 			IconId = 2,

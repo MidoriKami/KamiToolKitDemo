@@ -13,7 +13,6 @@ public static class RadioGroups {
 		// Vertical node that fits items vertically, and can space elements horizontally via tab-spacing
 		var tabList = new TabbedVerticalListNode {
 			Width = radioGroupCategory.Width,
-			IsVisible = true,
 		};
 
 		radioGroupCategory.AddNode(tabList);
@@ -28,7 +27,6 @@ public static class RadioGroups {
 		// Radio Group Node
 		var radioGroup = new RadioButtonGroupNode {
 			Width = radioGroupCategory.Width,
-			IsVisible = true,
 		};
 		
 		// Here we add options via text strings, and assign callback functions to do something when an option is clicked

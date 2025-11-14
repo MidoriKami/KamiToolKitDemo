@@ -10,7 +10,6 @@ public static class Buttons {
 	private static HorizontalFlexNode GetContainer(TreeListCategoryNode treeListCategoryNode) => new() {
 		Width = treeListCategoryNode.Width,
 		AlignmentFlags = FlexFlags.FitHeight | FlexFlags.CenterHorizontally | FlexFlags.FitContentHeight,
-		IsVisible = true,
 	};
 
 	private static TextNode GetTextNode() => new() {
@@ -48,7 +47,6 @@ public static class Buttons {
 		// A circle button node is a button node that uses one the games default circle textures
 		var circleButton = new CircleButtonNode {
 			Size = new Vector2(48.0f, 48.0f),
-			IsVisible = true,
 
 			// Here we can select which texture we want to use for the button
 			Icon = ButtonIcon.GearCogWithChatBubble,
@@ -75,7 +73,6 @@ public static class Buttons {
 		// IconButton's use a game icon id to load a game texture as a clickable icon
 		var iconButton = new IconButtonNode {
 			Size = new Vector2(48.0f, 48.0f),
-			IsVisible = true,
 
 			// Here we can select which iconId we want to display as a button
 			IconId = 2551,
@@ -102,7 +99,6 @@ public static class Buttons {
 		// ImGuiIconButton allows you to use any image file that you provide as a texture for the button
 		var imGuiIconButton = new ImGuiIconButtonNode {
 			Size = new Vector2(101.95f, 144.7f),
-			IsVisible = true,
 
 			// Here we set the path to load the texture from, this can also be a path to an existing game texture
 			TexturePath = Path.Combine(Services.PluginInterface.AssemblyLocation.Directory?.FullName!, @"assets\ff14_midorikami._no_BG.png"),
@@ -129,7 +125,6 @@ public static class Buttons {
 		// TextButtons's are a standard button with a text String
 		var textButton = new TextButtonNode {
 			Size = new Vector2(200.0f, 28.0f),
-			IsVisible = true,
 
 			// Here we set the text string to use, this does support SeString
 			String = "BIG RED BUTTON",
@@ -156,7 +151,6 @@ public static class Buttons {
 		// TextureButtons are buttons that load a part of an existing game texture
 		var textureButton = new TextureButtonNode {
 			Size = new Vector2(48.0f, 48.0f),
-			IsVisible = true,
 
 			// First we set the texture path
 			// Note, do not include "_hr1", the correct texture will be resolved depending on users 
@@ -190,7 +184,6 @@ public static class Buttons {
 		// TextureButtons are buttons that load a part of an existing game texture
 		var textureButton = new HoldButtonNode {
 			Size = new Vector2(100.0f, 28.0f),
-			IsVisible = true,
 			
 			// All button nodes have a "OnClick" handler you can subscribe to
 			OnClick = () => {

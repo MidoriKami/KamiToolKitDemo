@@ -11,7 +11,6 @@ public static class TextNineGrids {
 	private static HorizontalFlexNode GetContainer(TreeListCategoryNode treeListCategoryNode) => new() {
 		Width = treeListCategoryNode.Width,
 		AlignmentFlags = FlexFlags.FitContentHeight | FlexFlags.CenterVertically | FlexFlags.CenterHorizontally,
-		IsVisible = true,
 	};
 	
 	public static void ImageDemo(TreeListCategoryNode textNineGridCategory) {
@@ -24,7 +23,6 @@ public static class TextNineGrids {
 
 		// Represents a TextNode with a background texture that makes it easier to read the text
 		var textNineGrid = new TextNineGridNode {
-			IsVisible = true, 
 			
 			// Width value of size is ignored as the actual size is computed
 			Size = new Vector2(150.0f, 26.0f),

@@ -35,8 +35,6 @@ public class AddonWidgetDemo : NativeAddon {
 			
 			// Sets how much the node should move for each tick of scroll (default 24)
 			ScrollSpeed = 25,
-			
-			IsVisible = true,
 		});
 
 		scrollingAreaNode.ContentNode.OnLayoutUpdate = newHeight => scrollingAreaNode.ContentHeight = newHeight;
@@ -45,7 +43,6 @@ public class AddonWidgetDemo : NativeAddon {
 
 		// We add each category directly from the root tree node
 		treeListNode.AddCategoryNode(buttonCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Button",
 		});
@@ -53,7 +50,6 @@ public class AddonWidgetDemo : NativeAddon {
 		Buttons.ButtonDemo(buttonCategory);
 		
 		treeListNode.AddCategoryNode(dropDownCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Drop Down",
 		});
@@ -61,7 +57,6 @@ public class AddonWidgetDemo : NativeAddon {
 		DropDowns.DropDownDemo(dropDownCategory);
 		
 		treeListNode.AddCategoryNode(iconCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Icon",
 		});
@@ -69,7 +64,6 @@ public class AddonWidgetDemo : NativeAddon {
 		Icons.IconDemo(iconCategory);
 		
 		treeListNode.AddCategoryNode(imageCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Image",
 		});
@@ -77,7 +71,6 @@ public class AddonWidgetDemo : NativeAddon {
 		Images.ImageDemo(imageCategory);
 		
 		treeListNode.AddCategoryNode(inputTextCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Keyboard Input",
 		});
@@ -85,7 +78,6 @@ public class AddonWidgetDemo : NativeAddon {
 		KeyboardInput.InputDemo(inputTextCategory);
 		
 		treeListNode.AddCategoryNode(listCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "List",
 		});
@@ -93,7 +85,6 @@ public class AddonWidgetDemo : NativeAddon {
 		Lists.ListDemo(listCategory);
 		
 		treeListNode.AddCategoryNode(sliderCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Slider",
 		});
@@ -101,7 +92,6 @@ public class AddonWidgetDemo : NativeAddon {
 		Sliders.SliderDemo(sliderCategory);
 		
 		treeListNode.AddCategoryNode(progressBarCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Progress Bar",
 		});
@@ -109,7 +99,6 @@ public class AddonWidgetDemo : NativeAddon {
 		ProgressBars.ProgressBarDemo(progressBarCategory);
 		
 		treeListNode.AddCategoryNode(checkboxCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Checkbox",
 		});
@@ -117,7 +106,6 @@ public class AddonWidgetDemo : NativeAddon {
 		CheckBoxes.CheckBoxDemo(checkboxCategory);
 		
 		treeListNode.AddCategoryNode(counterCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Counter",
 		});
@@ -125,7 +113,6 @@ public class AddonWidgetDemo : NativeAddon {
 		Counters.CountersDemo(counterCategory);
 		
 		treeListNode.AddCategoryNode(textCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Text",
 		});
@@ -133,7 +120,6 @@ public class AddonWidgetDemo : NativeAddon {
 		Texts.TextDemo(textCategory);
 		
 		treeListNode.AddCategoryNode(tabBarCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Tab Bar",
 		});
@@ -141,7 +127,6 @@ public class AddonWidgetDemo : NativeAddon {
 		TabBars.TabBarDemo(tabBarCategory);
 		
 		treeListNode.AddCategoryNode(textNineGridCategory  = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Text NineGrid",
 		});
@@ -149,7 +134,6 @@ public class AddonWidgetDemo : NativeAddon {
 		TextNineGrids.ImageDemo(textNineGridCategory);
 		
 		treeListNode.AddCategoryNode(radioGroupCategory = new TreeListCategoryNode {
-			IsVisible = true,
 			IsCollapsed = true,
 			String = "Radio Group",
 		});
