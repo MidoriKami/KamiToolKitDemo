@@ -1,7 +1,6 @@
 ﻿using System.Numerics;
 using KamiToolKit.Classes;
 using KamiToolKit.Nodes;
-using KamiToolKit.Nodes.Slider;
 
 namespace KamiToolKitDemo.Demos;
 

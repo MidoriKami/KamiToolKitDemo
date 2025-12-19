@@ -1,5 +1,5 @@
 ﻿using FFXIVClientStructs.FFXIV.Component.GUI;
-using KamiToolKit.Addon;
+using KamiToolKit;
 using KamiToolKit.Nodes;
 
 namespace KamiToolKitDemo.Demos;
@@ -24,18 +24,19 @@ public class AddonWidgetDemo : NativeAddon {
 	
 	protected override unsafe void OnSetup(AtkUnitBase* addon) {
 		// ScrollingAreaNode Demo, creates a content node that you can attach your elements to and will scroll the contents
-		AttachNode(scrollingAreaNode = new ScrollingAreaNode<TreeListNode> {
-			
+		scrollingAreaNode = new ScrollingAreaNode<TreeListNode> {
+
 			// Size and Position is the area that you want to be visible
 			Position = ContentStartPosition,
 			Size = ContentSize,
-			
+
 			// Content Height is how tall you want the entire scrolling area to be 
 			ContentHeight = 2000.0f,
-			
+
 			// Sets how much the node should move for each tick of scroll (default 24)
 			ScrollSpeed = 25,
-		});
+		};
+		scrollingAreaNode.AttachNode(this);
 
 		scrollingAreaNode.ContentNode.OnLayoutUpdate = newHeight => scrollingAreaNode.ContentHeight = newHeight;
 

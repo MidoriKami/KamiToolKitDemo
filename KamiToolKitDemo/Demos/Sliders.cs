@@ -2,7 +2,6 @@
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using KamiToolKit.Classes;
 using KamiToolKit.Nodes;
-using KamiToolKit.Nodes.Slider;
 
 namespace KamiToolKitDemo.Demos;
 

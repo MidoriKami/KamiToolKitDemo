@@ -14,14 +14,12 @@ public sealed class KamiToolKitDemo : IDalamudPlugin {
 
         // Native Controller is required for injecting KamiToolKit elements into the native UI
         // It provides tracking and safety features that ensure the stability of the game when manipulating native elements
-        Services.NativeController = new NativeController(pluginInterface);
+        KamiToolKitLibrary.Initialize(pluginInterface);
 
         Services.AddonWidgetDemo = new AddonWidgetDemo {
             InternalName = "AddonWidgetDemo", 
             Title = "Widget Demo", 
             Size = new Vector2(750.0f, 750.0f), 
-            Position = new Vector2(1525.0f, 200.0f),
-            NativeController = Services.NativeController,
         };
         
         // For this demo, we will open the widget window as soon as the plugin loads
@@ -45,8 +43,8 @@ public sealed class KamiToolKitDemo : IDalamudPlugin {
         // Disposing our Addon will close it and remove it from the game
         Services.AddonWidgetDemo.Dispose();
         
-        // Disposing native controller will attempt to clean up any nodes or addons that we might have missed
-        Services.NativeController.Dispose();
+        // Disposing KamiToolKitLibrary will attempt to clean up any nodes or addons that we might have missed
+        KamiToolKitLibrary.Dispose();
     }
     
     private void OpenWidgetDemo()
@@ -59,6 +57,5 @@ public class Services {
 	[PluginService] public static IDalamudPluginInterface PluginInterface { get; set; } = null!;
 	[PluginService] public static IDataManager DataManager { get; set; } = null!;
 
-	public static NativeController NativeController { get; set; } = null!;
     public static AddonWidgetDemo AddonWidgetDemo { get; set; } = null!;
 }

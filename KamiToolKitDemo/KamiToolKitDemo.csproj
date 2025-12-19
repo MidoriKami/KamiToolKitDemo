@@ -1,9 +1,19 @@
-﻿<Project Sdk="Dalamud.NET.Sdk/13.0.0">
+﻿<Project Sdk="Dalamud.NET.Sdk/14.0.1">
     <PropertyGroup>
-        <PackageProjectUrl>https://github.com/MidoriKami/KamiToolKitDemo.git</PackageProjectUrl>
         <Version>1.0.0.0</Version>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <Author>MidoriKami</Author>
+        <Name>KamiToolKitDemo</Name>
+        <InternalName>calculator</InternalName>
+        <Punchline>A simple demo of KamiToolKit Capabilities</Punchline>
+        <Description>Adds demo widget for showing KamiToolKit Capabilities</Description>
+        <RepoUrl>https://github.com/MidoriKami/KamiToolKitDemo</RepoUrl>
+        <Tags>science;zero_is_prime</Tags>
+        <AcceptsFeedback>false</AcceptsFeedback>
+    </PropertyGroup>
+    
     <ItemGroup>
         <Content Include="..\KamiToolKitDemo\assets\ff14_midorikami._no_BG.png">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

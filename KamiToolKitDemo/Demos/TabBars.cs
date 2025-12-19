@@ -1,14 +1,10 @@
 ﻿using System.Numerics;
 using FFXIVClientStructs.FFXIV.Component.GUI;
-using KamiToolKit;
 using KamiToolKit.Nodes;
-using KamiToolKit.Nodes.TabBar;
 
 namespace KamiToolKitDemo.Demos;
 
 public static class TabBars {
-	private static NativeController NativeController => Services.NativeController;
-	
 	public static void TabBarDemo(TreeListCategoryNode tabBarCategory) {
 		tabBarCategory.AddHeader("TabBar");
 		TabBar(tabBarCategory);
@@ -66,9 +62,9 @@ public static class TabBars {
 			textNode3.IsVisible = true;
 		});
 		
-		NativeController.AttachNode(textNode1, tabContainer);
-		NativeController.AttachNode(textNode2, tabContainer);
-		NativeController.AttachNode(textNode3, tabContainer);
+		textNode1.AttachNode(tabContainer);
+		textNode2.AttachNode(tabContainer);
+		textNode3.AttachNode(tabContainer);
 		
 		container.AddNode(tabBar);
 		container.AddNode(tabContainer);

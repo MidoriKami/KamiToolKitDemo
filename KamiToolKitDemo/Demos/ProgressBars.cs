@@ -4,7 +4,6 @@ using System.Numerics;
 using Dalamud.Interface;
 using KamiToolKit.Classes;
 using KamiToolKit.Nodes;
-using KamiToolKit.Nodes.Slider;
 
 namespace KamiToolKitDemo.Demos;
 
@@ -26,7 +25,7 @@ public static class ProgressBars {
 		var flexGrid = GetContainer(treeListCategoryNode);
 		
 		// Node that looks like a castbar
-		var castBarNode = new CastBarProgressBarNode {
+		var castBarNode = new ProgressBarCastNode {
 			Size = new Vector2(300.0f, 32.0f),
 			
 			// Value between 0.0f and 1.0f (inclusive)
