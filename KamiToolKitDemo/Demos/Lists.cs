@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
 using Dalamud.Utility;
 using FFXIVClientStructs.FFXIV.Component.GUI;
-using KamiToolKit.Classes;
+using KamiToolKit.Enums;
 using KamiToolKit.Nodes;
 using Lumina.Excel.Sheets;
 
@@ -38,9 +38,9 @@ public static class Lists {
 		
 		// Basic text list node, you can set various text options that the user can select
 		// Note: the number of buttons generated is dependent on the higher of the dropdown element
-		var textListNode = new TextListNode {
+		var textListNode = new TextButtonListNode {
 			Size = new Vector2(300.0f, 150.0f),
-
+		
 			// Set how many options at most we will show at a time
 			MaxButtons = 3,
 			
@@ -56,7 +56,7 @@ public static class Lists {
 				"Sir, this is a Wendy's",
 				"No! This is Patrick!",
 			],
-
+		
 			// Lists provide an OnOptionSelected callback to trigger doing something when the user selects an option
 			OnOptionSelected = option => {
 				textNode.String = $"Option Selected: {option}";
@@ -74,7 +74,7 @@ public static class Lists {
 		
 		// LuminaLists extract data from the games internal datasheets
 		// This allows you to let the user choose from a filtered list of data
-		var luminaListNode = new LuminaListNode<Aetheryte> {
+		var luminaListNode = new LuminaButtonListNode<Aetheryte> {
 			Size = new Vector2(300.0f, 150.0f),
 						
 			// Set how many options at most we will show at a time
@@ -82,10 +82,10 @@ public static class Lists {
 			
 			// Here we define a filter function that will limit the range of options
 			FilterFunction = option => option.IsAetheryte && !option.AethernetName.Value.Name.ExtractText().IsNullOrEmpty(),
-
+		
 			// As each lumina object could have several different strings, we have to define what we want to show to the user
 			LabelFunction = option => option.AethernetName.Value.Name.ExtractText(),
-
+		
 			// Finally, our callback will give us a reference to the full lumina object that represents the option the user chose
 			OnOptionSelected = option => {
 				textNode.String = $"Option Selected: {option.AethernetName.Value.Name.ExtractText()}";
