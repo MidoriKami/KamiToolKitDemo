@@ -1,5 +1,3 @@
-# KamiToolKitDemo
+# This repository is archived
 
-This project is a proof of concept plugin for FFXIV.
-
-This demonstrates how you can use KamiToolKit to implement a custom native window inside the game.
+A better code reference on how to use KTK can be found in [VanillaPlus](https://github.com/MidoriKami/VanillaPlus). 
